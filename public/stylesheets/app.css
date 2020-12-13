@@ -1,0 +1,76 @@
+:root {
+  --blue: 76, 201, 240;
+  --white: whitesmoke;
+}
+
+body, main {
+  font-family: 'Roboto Condensed', sans-serif;
+  background: var(--white);
+}
+
+header, h1 a, .user-info  {
+  color: #f72585;
+}
+
+header, .finstagram-post {
+  margin-bottom: 48px;
+  padding-bottom: 10px;
+}
+        
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 32px;
+  text-shadow: 1px 1px var(--white);
+  background-color: rgba(var(--blue), 0.4);
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  padding: 0 10px;
+}
+
+
+.finstagram-post {
+  background-color: rgba(var(--blue), 0.1);
+  padding: 20px;
+  border: 1px solid rgba(var(--blue), 0.4);
+  border-radius: 4px;
+}
+
+.finstagram-post .user-info .user-profile img {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+header a:hover {
+  background: var(--white);
+}
+
+a.photo:hover {
+    color: #4361ee;
+    padding: 10px; 
+    transition: padding 0.5s;
+}
+
+.login-info a {
+  padding: 10px;
+}
+
+

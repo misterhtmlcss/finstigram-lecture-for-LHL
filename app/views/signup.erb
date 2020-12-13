@@ -1,0 +1,28 @@
+<% if @error_message %>
+  <%= erb(:'shared/error', { locals: { errors: [ @error_message ] } } ) %>
+<% end %>
+<form action="/signup" method="POST">
+  <div class="form-group">
+    <label for="email">email
+    <input name="email" type="email" id="email">
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="avatar_url">Avatar URL
+    <input name="avatar_url"  type="text" id="avatar_url">
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="username">Username
+    <input name="username"  type="text" id="username">
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="password">Password
+    <input name="password" type="password" id="password">
+    </label>
+  </div>
+  <div class="form-group">
+    <button class="button" type="submit">Signup</button>
+  </div>
+</form>

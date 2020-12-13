@@ -1,0 +1,44 @@
+@media (min-width: 600px) {
+
+  header {
+    flex-direction: row;
+    padding: 0 20px;
+  } 
+  main {
+    width: 450px;
+    padding: 0;
+  }
+
+  h1 {
+    margin: 0.67em 0;
+  }
+}
+
+@media (min-width: 1201px) {
+  body {
+    position: relative;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+  }
+
+  header a:hover {
+    background: var(--white);
+    color: #f72585;
+  }
+
+  main {
+    max-width: 600px;
+  }
+ 
+  .login-info {
+    margin: 12px;
+  }
+}
+
+
+
+
+
