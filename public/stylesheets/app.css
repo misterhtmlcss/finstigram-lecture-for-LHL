@@ -5,7 +5,7 @@
 
 body, main {
   font-family: 'Roboto Condensed', sans-serif;
-  background: var(--white);
+  background: pink;
 }
 
 header, h1 a, .user-info  {
