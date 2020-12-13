@@ -9,13 +9,6 @@ helpers do
 end
 
 # Routes
-
-before '/posts/new' do
-  # ensure user is logged in, if not, direct to login
-  redirect to('/login') unless logged_in?
-end
-
-
 get '/' do
   @finstagram_posts = FinstagramPost.order(created_at: :desc)
   erb(:index)
@@ -63,15 +56,21 @@ post '/login' do
   end
 end
 
-
 get "/logout" do
   session[:user_id] = nil
   redirect to('/login')
 end
 
+before '/posts/new' do
+  # ensure user is logged in, if not, direct to login
+  redirect to('/login') unless logged_in?
+end
 
+get '/posts/new' do 
+  @finstagram_post = FinstagramPost.new
+  erb(:'posts/new')
+end 
 
-# get posts!?
 get "/posts/:id" do
   @finstagram_post = FinstagramPost.find_by({id: params[:id]})
   erb(:'posts/show')
